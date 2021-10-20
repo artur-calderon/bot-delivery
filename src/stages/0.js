@@ -15,7 +15,14 @@ function execute(user, msg, contato) {
 
   let menu = ' CARDAPIO \n\n'
 
+  // for (let i = 0; i < menu0.length; i++) {
+  //   console.log(`Log do stage 0 ${i}`)
+  //   let element = menu0[i]
+  //   menu += `${value} - ${element.description}        R$ ${element.price} \n`
+  // }
+
   Object.keys(menu0).forEach(value => {
+    console.log(value)
     let element = menu0[value]
     menu += `${value} - ${element.description}        R$ ${element.price} \n`
   })

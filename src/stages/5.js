@@ -18,7 +18,7 @@ function execute(user, msg) {
     return ['Pra Quanto?']
   }
   if (msg === 'Não') {
-    estagioInterno++
+    estagioInterno = 1
   }
   if (msg === '2') {
     estagioInterno++
