@@ -13,7 +13,7 @@ function execute(user, msg, contato) {
     time = 'Bom dia'
   }
 
-  let menu = ' CARDAPIO \n\n'
+  let menu = ' CARDÁPIO \n\n'
 
   // for (let i = 0; i < menu0.length; i++) {
   //   console.log(`Log do stage 0 ${i}`)
@@ -31,7 +31,7 @@ function execute(user, msg, contato) {
 
   return [
     menu,
-    `${time} ${contato.name} sou uma assistente virtual, irei apresentar o carpádio, para fazer o pedido basta enviar o codigo do produto`
+    `${time} ${contato.name} sou uma assistente virtual, irei apresentar o cardápio, para fazer o pedido basta enviar o codigo do produto`
   ]
 }
 

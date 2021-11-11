@@ -3,6 +3,7 @@ const { step } = require('../models/stages')
 const { dataBase } = require('../firebase')
 
 function execute(user, msg, contato) {
+  console.log('stage 3')
   if (msg === '*') {
     db[user].stage = 0
     return ['Pedido cancelado com sucesso']
@@ -10,8 +11,7 @@ function execute(user, msg, contato) {
 
   if (msg === '#') {
     db[user].stage = 5
-
-    return step[5].obj.execute(user, '')
+    return ' ou * para cancelar```'
   }
 
   dataBase
@@ -29,7 +29,7 @@ function execute(user, msg, contato) {
       console.log(err)
     })
   return [
-    '```Digite # para continuar ou * para cancelar```',
+    '```Digite # para continuar',
     `Confirma endereco de entrega : \n ${msg}`
   ]
 }

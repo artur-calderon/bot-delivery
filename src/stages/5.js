@@ -3,25 +3,30 @@ const { step } = require('../models/stages')
 let estagioInterno = 0
 
 function execute(user, msg) {
-  //db[user].stage = 0;
+  //db[user].stage =
+  console.log('stage 5')
 
   if (estagioInterno === 1) {
     db[user].stage = 4
 
     return step[4].obj.execute(user, '')
   }
+
   if (msg === '1') {
     return ['Precisa de troco? Sim, Não?']
   }
+
   if (msg === 'Sim') {
-    estagioInterno++
+    db[user].stage = 4
     return ['Pra Quanto?']
   }
+
   if (msg === 'Não') {
-    estagioInterno = 1
+    return (db[user].stage = 4)
   }
+
   if (msg === '2') {
-    estagioInterno++
+    return (db[user].stage = 4)
   }
   console.log(estagioInterno)
   if (msg === '3') {

@@ -2,6 +2,7 @@ const { menu0 } = require('../menu/menu0')
 const { db } = require('../models/banco')
 
 function execute(user, msg) {
+  console.log('stage 1')
   if (msg === '*') {
     db[user].stage = 0
     return ['Pedido cancelado com sucesso']
@@ -9,6 +10,7 @@ function execute(user, msg) {
 
   if (msg === '#') {
     db[user].stage = 2
+
     return ['Estamos fechando seu pedido, ok?']
   }
 
